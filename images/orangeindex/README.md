@@ -12,4 +12,4 @@ To update Solr with today's updates run:
 `sudo docker run pulibrary/orangeindex`
 
 To run a different index function, you can pass the rake task to bash:
-`sudo docker run pulibrary/orangeindex bash -c 'rake index`
+`sudo docker run pulibrary/orangeindex bash -c 'rake index'`
