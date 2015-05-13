@@ -28,3 +28,7 @@ WORKDIR /opt
 RUN git clone https://github.com/pulibrary/orangeindex.git && \
     cd orangeindex && \
     bundle install
+
+WORKDIR /opt/orangeindex
+
+CMD ["/bin/bash", "-c", "rake liberate:latest:production"]
