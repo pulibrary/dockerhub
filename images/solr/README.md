@@ -1,2 +1,3 @@
-# solr
-Not on Docker Hub. Based on a functional version for a [GeoBlacklight Solr Instance](https://registry.hub.docker.com/u/geoblacklight/solr/) running with Jetty. Should probably be deleted.
+# Solr Version 5.1
+
+An Orangelight Configuration for Solr 5.1 in single instance mode
