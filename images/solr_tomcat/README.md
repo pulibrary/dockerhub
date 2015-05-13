@@ -1,4 +1,4 @@
-# Solr running with Tomccat on Docker
+# Solr running with Tomcat on Docker
 	
 Automated SolrCloud Bootstrap with **Solr 4.10.0** running on **Apache Tomcat 7.0.59** and cluster managed with **ZooKeeper 3.4.6**.
 
