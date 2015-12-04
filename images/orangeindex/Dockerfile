@@ -1,7 +1,7 @@
-FROM ubuntu:14.04
+FROM java:8-jdk
 MAINTAINER Nikitas Tampakis <nikitas.tampakis@gmail.com>
 
-ENV JRUBY_VERSION 1.7.19
+ENV JRUBY_VERSION 9.0.4.0
 
 WORKDIR /usr/local
 
@@ -10,8 +10,7 @@ RUN apt-get update && apt-get -y install \
     wget \
     git \
     curl \
-    libxml2-dev \
-    default-jdk
+    libxml2-dev
 
 # Install jruby
 RUN curl http://jruby.org.s3.amazonaws.com/downloads/$JRUBY_VERSION/jruby-bin-$JRUBY_VERSION.tar.gz | tar -xz && \
@@ -31,4 +30,4 @@ RUN git clone https://github.com/pulibrary/orangeindex.git && \
 
 WORKDIR /opt/orangeindex
 
-CMD ["/bin/bash", "-c", "rake liberate:latest:production"]
+CMD ["/bin/bash", "-c", "rake liberate:latest"]
