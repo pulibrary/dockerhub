@@ -1,7 +1,7 @@
 FROM java:8-jdk
 MAINTAINER Nikitas Tampakis <nikitas.tampakis@gmail.com>
 
-ENV JRUBY_VERSION 9.0.4.0
+ENV JRUBY_VERSION 1.7.23
 
 WORKDIR /usr/local
 
@@ -24,7 +24,7 @@ RUN gem install bundler
 WORKDIR /opt
 
 # Download indexer and install gem dependencies
-RUN git clone https://github.com/pulibrary/orangeindex.git && \
+RUN git clone https://github.com/pulibrary/orangeindex.git --branch jruby-1.7 && \
     cd orangeindex && \
     bundle install
 
