@@ -1,7 +1,7 @@
 FROM java:8-jdk
 MAINTAINER Nikitas Tampakis <nikitas.tampakis@gmail.com>
 
-ENV JRUBY_VERSION 1.7.23
+ENV JRUBY_VERSION 1.7.25
 
 WORKDIR /usr/local
 
@@ -24,10 +24,10 @@ RUN gem install bundler
 WORKDIR /opt
 
 # Download indexer and install gem dependencies
-RUN git clone https://github.com/pulibrary/orangeindex.git --branch jruby-1.7 && \
-    cd orangeindex && \
+RUN git clone https://github.com/pulibrary/marc_liberation.git && \
+    cd marc_liberation/marc_to_solr && \
     bundle install
 
-WORKDIR /opt/orangeindex
+WORKDIR /opt/marc_liberation/marc_to_solr
 
 CMD ["/bin/bash", "-c", "rake liberate:latest"]
