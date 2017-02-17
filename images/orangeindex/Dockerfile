@@ -26,6 +26,7 @@ WORKDIR /opt
 # Download indexer and install gem dependencies
 RUN git clone https://github.com/pulibrary/marc_liberation.git && \
     cd marc_liberation/marc_to_solr && \
+    git checkout recap_demo_branch && \
     bundle install
 
 WORKDIR /opt/marc_liberation/marc_to_solr
